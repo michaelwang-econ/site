@@ -1,0 +1,130 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{newtxtext}
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\raggedright
+
+\renewcommand\labelitemi{{\boldmath$\cdot$}}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% -------- Definitions --------
+
+\newcommand{\lineunder} {
+    \vspace*{-4pt} \\
+	\hrulefill \\
+	\vspace{-2pt}
+}
+
+\newcommand{\header} [1] {
+    {\vspace*{6pt} \large{\textsc{#1}}}
+    \vspace*{-6pt} \lineunder \vspace{1mm}
+}
+
+\newcommand{\pagehead} {
+	\begin{center}
+		{\Huge \scshape {Michael Wang}} \\[1.5mm]
+		\href{mailto:michael.wang.mcw75@yale.edu}{michael.wang.mcw75@yale.edu} $\cdot$ \href{https://michaelc.wang}{michaelc.wang} $\cdot$ \today \\
+		\vspace*{3mm}
+	\end{center}
+}
+
+\begin{document}
+
+% -------- Resume --------
+
+\setitemize{itemsep={-1mm},after=\vspace{2mm},before=\vspace{-2mm}}
+\pagehead
+
+% -------- Education --------
+
+\header{Education}
+
+\textbf{Yale University} \\
+Ph.D.\ Economics \hfill Exp.\ 2027 \\
+\hspace{2em} \textit{Dissertation}: Essays in Microeconomic Theory \\
+\hspace{2em} \textit{Advisors}: Dirk Bergemann (chair), Marina Halac, Navin Kartik \\[1.5mm]
+M.A.\ Economics \hfill 2023 \\[4.5mm]
+
+\textbf{Princeton University} \\
+A.B.\ Mathematics, \textit{magna cum laude} \hfill 2021
+
+\vspace{4.5mm}
+
+% -------- Publications --------
+
+%\header{Publications}
+
+%\textbf{Title}, with coauthors \hfill Year \\
+%\textit{Journal}, vol \#, no.\ \# \\[4.5mm]
+
+% -------- Working Papers --------
+
+\header{Working Papers}
+
+\href{https://arxiv.org/abs/2401.12366}{\textbf{Screening and Segmenting: A Consumer Surplus Perspective}}, with Dirk Bergemann and Tibor Heumann \\[0.5mm]
+Revise and resubmit, \textit{American Economic Review} \\[2.5mm]
+
+\textbf{Censorship and Steering in Platform Duopolies: Theory and Evidence from Amazon}, with Kyungho Lee \\[2.5mm]
+
+\href{https://arxiv.org/abs/2502.08022}{\textbf{Optimal Pricing of Cloud Services: Committed Spend Under Demand Uncertainty}}, with Dirk Bergemann
+
+\vspace{4.5mm}
+
+% -------- Works in Progress --------
+
+\header{Works in Progress}
+
+\textbf{Dynamics of Durable Good Upgrades} (Job Market Paper) \\[2.5mm]
+
+\textbf{Effects of Recommender Systems with Strategic Sellers}
+
+\vspace{4.5mm}
+
+% -------- Teaching Experience --------
+
+\header{Teaching Experience}
+
+\textbf{Yale University} \\
+ECON 159, Game Theory \hfill Fall 2024 \\[0.5mm]
+ECON 5501a, General Economic Theory: Microeconomics (PhD Game Theory) \hfill Spring 2026 \\[4.5mm]
+
+% -------- Awards --------
+
+\header{Honors \& Awards}
+
+Carl Arvid Anderson Fellowship \hfill 2025 \\[0.5mm]
+Benitez Family Fellowship \hfill 2023 \\[0.5mm]
+Cowles Foundation Fellowship \hfill 2021 \\[0.5mm]
+Phi Beta Kappa \hfill 2021 \\[0.5mm]
+U.S. Presidential Scholar \hfill 2017
+
+\vspace{4.5mm}
+
+% -------- Professional Service --------
+
+\header{Professional Service}
+
+\textbf{Referee} for Quarterly Journal of Economics, American Economic Journal: Microeconomics, American Economic Review: Insights, ACM Conference on Economics and Computation (EC), ACM-SIAM Symposium on Discrete Algorithms \\[1.5mm]
+
+\textbf{Research Assistant} for Dirk Bergemann (Jun \textquotesingle 23 - May \textquotesingle 25), Ryota Iijima (Sep \textquotesingle 23 - Dec \textquotesingle 23), Federal Reserve Bank of New York (Jun \textquotesingle 20 - Aug \textquotesingle 20)
+
+\vspace{4.5mm}
+
+% -------- Personal Information --------
+
+\header{Personal Information}
+
+\vspace{2pt}
+\hspace{-11pt}
+\def\arraystretch{1.1}
+\begin{tabular}{ll}
+	Citizenship:		& United States	\\
+	Languages:			& English (native), Chinese (fluent) \\
+\end{tabular}
+
+\end{document}
