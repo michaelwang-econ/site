@@ -14,10 +14,6 @@
     href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%20.%2C%3B%3A%27-%E2%80%94%26%21%22%3F%28%29/%E5%BE%A1%E7%A5%9E%E7%B1%A4%E5%A4%A7%E4%B8%AD%E5%B0%8F%E5%90%89%E5%8D%8A%E6%9C%AB%E5%87%B6%E6%83%A8%E4%BA%8B"
     rel="stylesheet"
   />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap&text=%E5%BE%A1%E7%A5%9E%E7%B1%A4"
-    rel="stylesheet"
-  />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -108,23 +104,37 @@
 
     .omikuji-box {
       position: relative;
-      width: 110px;
-      height: 210px;
+      width: 120px;
+      height: 229px;
       cursor: pointer;
       transform-origin: center center;
       background: transparent;
       border: 0;
       padding: 0;
       outline: none;
+      border-radius: 4px;
+      box-shadow: 0 8px 14px rgba(20, 17, 15, 0.25);
+      transition: transform 0.25s ease;
+    }
+    .omikuji-box:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.02);
     }
     .omikuji-box:disabled { cursor: default; }
-    .omikuji-box:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 4px; }
+    .omikuji-box:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 6px;
+      border-radius: 4px;
+    }
 
-    .omikuji-box svg {
+    .omikuji-box img {
       width: 100%;
       height: 100%;
       display: block;
-      filter: drop-shadow(0 8px 14px rgba(20, 17, 15, 0.25));
+      object-fit: cover;
+      border-radius: 4px;
+      -webkit-user-drag: none;
+      user-select: none;
+      pointer-events: none;
     }
 
     /* shake animation */
@@ -305,63 +315,7 @@
     <div class="page-inner">
       <div class="box-stage">
         <button id="omikujiBox" class="omikuji-box" aria-label="Shake the omikuji box">
-          <svg viewBox="0 0 110 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <!-- main body wood gradient — deeper, warmer -->
-              <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%"  stop-color="#a37a4d"/>
-                <stop offset="35%" stop-color="#8b6238"/>
-                <stop offset="70%" stop-color="#724e2a"/>
-                <stop offset="100%" stop-color="#5e3f22"/>
-              </linearGradient>
-              <!-- lid/base band — slightly darker, distinct from body -->
-              <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%"  stop-color="#6e4824"/>
-                <stop offset="50%" stop-color="#5a3a1c"/>
-                <stop offset="100%" stop-color="#4a2f17"/>
-              </linearGradient>
-              <!-- side shading: rounds out the volume -->
-              <linearGradient id="sideShade" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%"   stop-color="#000" stop-opacity="0.28"/>
-                <stop offset="15%"  stop-color="#000" stop-opacity="0.05"/>
-                <stop offset="50%"  stop-color="#fff" stop-opacity="0.04"/>
-                <stop offset="85%"  stop-color="#000" stop-opacity="0.05"/>
-                <stop offset="100%" stop-color="#000" stop-opacity="0.32"/>
-              </linearGradient>
-            </defs>
-
-            <!-- box body -->
-            <rect x="3" y="3" width="104" height="204" rx="2.5" ry="2.5"
-                  fill="url(#wood)" stroke="#2e1c0c" stroke-width="1.3"/>
-
-            <!-- side shading for volume -->
-            <rect x="3" y="3" width="104" height="204" rx="2.5" ry="2.5"
-                  fill="url(#sideShade)" pointer-events="none"/>
-
-            <!-- top lid band (narrower) -->
-            <rect x="3" y="3" width="104" height="14" rx="2.5" ry="2.5"
-                  fill="url(#band)" stroke="#2e1c0c" stroke-width="1.3"/>
-            <line x1="5" y1="5" x2="105" y2="5" stroke="#fff" stroke-opacity="0.18" stroke-width="0.8"/>
-            <line x1="3" y1="17" x2="107" y2="17" stroke="#1d1106" stroke-width="0.6" stroke-opacity="0.85"/>
-            <line x1="3" y1="17.7" x2="107" y2="17.7" stroke="#fff" stroke-opacity="0.06" stroke-width="0.4"/>
-
-            <!-- bottom base band (narrower) -->
-            <rect x="3" y="193" width="104" height="14" rx="2.5" ry="2.5"
-                  fill="url(#band)" stroke="#2e1c0c" stroke-width="1.3"/>
-            <line x1="3" y1="193" x2="107" y2="193" stroke="#1d1106" stroke-width="0.6" stroke-opacity="0.85"/>
-            <line x1="3" y1="193.7" x2="107" y2="193.7" stroke="#fff" stroke-opacity="0.06" stroke-width="0.4"/>
-
-            <!-- 御神籤 vertically — centered between lid and base -->
-            <text x="55" y="68" text-anchor="middle"
-                  font-family="'Yuji Mai', 'Shippori Mincho', serif"
-                  font-size="34" fill="#f8efd6" opacity="0.95">御</text>
-            <text x="55" y="112" text-anchor="middle"
-                  font-family="'Yuji Mai', 'Shippori Mincho', serif"
-                  font-size="34" fill="#f8efd6" opacity="0.95">神</text>
-            <text x="55" y="156" text-anchor="middle"
-                  font-family="'Yuji Mai', 'Shippori Mincho', serif"
-                  font-size="34" fill="#f8efd6" opacity="0.95">籤</text>
-          </svg>
+          <img src="omikuji_box.png" alt="" draggable="false" />
         </button>
       </div>
 
