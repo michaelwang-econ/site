@@ -179,7 +179,7 @@
     }
 
     .section-label {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -190,7 +190,7 @@
     .paper-meta em { font-style: italic; }
 
     .subsection-label {
-      font-size: 11px;
+      font-size: 12.5px;
       font-weight: 400;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -229,7 +229,7 @@
       font-size: 15px;
       font-weight: 500;
       color: var(--text);
-      margin-bottom: 3px;
+      margin-bottom: 2px;
       text-decoration: none;
     }
 
@@ -257,6 +257,12 @@
       font-weight: 300;
       color: var(--muted);
       letter-spacing: 0.02em;
+    }
+
+    /* Publications: plain-text meta directly follows the author line — pull it
+       up to trim the gap (line-height leading makes the default feel too loose) */
+    .paper-coauthors + .paper-meta {
+      margin-top: -5px;
     }
 
     .paper-meta .tag {
@@ -327,27 +333,17 @@
     <div class="section">
       <p class="section-label">Research</p>
 
-      <!--
       <p class="subsection-label">Publications</p>
-
-      <div class="paper">
-        <div class="paper-left">
-          <div class="paper-title">Placeholder Publication Title</div>
-          <div class="paper-coauthors">with Coauthor Name</div>
-          <div class="paper-meta"><em>Journal Name</em></div>
-        </div>
-      </div>
-      -->
-
-      <p class="subsection-label">Working Papers</p>
 
       <div class="paper">
         <div class="paper-left">
           <a href="https://arxiv.org/abs/2401.12366" class="paper-title">Screening and Segmenting: A Consumer-Surplus Perspective</a>
           <div class="paper-coauthors">with Dirk Bergemann and Tibor Heumann</div>
-          <div class="paper-meta"><span class="tag">R&R</span> <em>American Economic Review</em></div>
+          <div class="paper-meta">Conditionally Accepted, <em>American Economic Review</em></div>
         </div>
       </div>
+
+      <p class="subsection-label" style="margin-top: 52px;">Working Papers</p>
 
       <div class="paper">
         <div class="paper-left">
