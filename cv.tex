@@ -7,6 +7,7 @@
 
 \pagestyle{empty}
 \raggedright
+\setstretch{1.1}
 
 \renewcommand\labelitemi{{\boldmath$\cdot$}}
 
@@ -20,9 +21,17 @@
 	\vspace{-2pt}
 }
 
+% One publication-type entry: bold title, coauthors, and venue as a single
+% continuous paragraph; entries are separated by \pubsep, not indentation.
+\newcommand{\cvindent}{2em}
+\newcommand{\pubsep}{1.5mm}
+\newcommand{\pub}[1]{%
+    \par\noindent #1\par\vspace{\pubsep}
+}
+
 \newcommand{\header} [1] {
     {\vspace*{6pt} \large{\textsc{#1}}}
-    \vspace*{-6pt} \lineunder \vspace{1mm}
+    \vspace*{-6pt} \lineunder
 }
 
 \newcommand{\pagehead} {
@@ -46,62 +55,71 @@
 
 \textbf{Yale University} \\
 Ph.D.\ Economics \hfill Exp.\ 2027 \\
-\hspace{2em} \textit{Fields}: Microeconomic Theory, Economics \& Computer Science \\
-\hspace{2em} \textit{Advisors}: Dirk Bergemann (chair), Marina Halac, Navin Kartik \\[1.5mm]
-M.A.\ Economics \hfill 2023 \\[4mm]
+\hspace{\cvindent}\textit{Fields}: Microeconomic Theory, Economics \& Computer Science \\
+\hspace{\cvindent}\textit{Advisors}: Dirk Bergemann (chair), Marina Halac, Navin Kartik \\[1.5mm]
+M.A.\ Economics \hfill 2023 \\[3mm]
 
 \textbf{Princeton University} \\
 A.B.\ Mathematics, \textit{magna cum laude} \hfill 2021
 
-\vspace{4mm}
+\vspace{3mm}
 
 % -------- Publications --------
 
 \header{Publications}
 
-\href{https://www.aeaweb.org/articles?id=10.1257/aer.20250206}{\textbf{Screening and Segmenting: A Consumer Surplus Perspective}}, with Dirk Bergemann and Tibor Heumann \\[0.5mm]
-Forthcoming, \textit{American Economic Review} \\[4mm]
+\pub{\href{https://www.aeaweb.org/articles?id=10.1257/aer.20250206}{\textbf{Screening and Segmenting: A Consumer Surplus Perspective}}, with Dirk Bergemann and Tibor Heumann, Forthcoming, \textit{American Economic Review}.}
+
+\vspace{2.5mm}
 
 % -------- Working Papers --------
 
 \header{Working Papers}
 
-\textbf{Censorship and Steering in Platform Duopolies: Theory and Evidence from Amazon}, with Kyungho Lee \\[2.5mm]
+\pub{\textbf{Dynamics of Durable Good Upgrades} (Job Market Paper)}
 
-\href{https://arxiv.org/abs/2502.08022}{\textbf{Optimal Pricing of Cloud Services: Committed Spend Under Demand Uncertainty}}, with Dirk Bergemann
+\pub{\href{https://arxiv.org/abs/2502.08022}{\textbf{Optimal Pricing of Cloud Services: Committed Spend under Demand Uncertainty}}, with Dirk Bergemann}
 
-\vspace{4mm}
+\vspace{2.5mm}
+
+% -------- Conference Proceedings --------
+
+\header{Conference Proceedings}
+
+\pub{\href{https://dl.acm.org/doi/10.1145/3670865.3673626}{\textbf{A Unified Approach to Second and Third Degree Price Discrimination}}, with Dirk Bergemann and Tibor Heumann, Extended Abstract, \textit{Proceedings of the 25th ACM Conference on Economics and Computation}}
+
+\vspace{2.5mm}
 
 % -------- Works in Progress --------
 
 \header{Works in Progress}
 
-\textbf{Dynamics of Durable Good Upgrades} (Job Market Paper) \\[2.5mm]
+\pub{\textbf{Censorship and Steering in Platform Duopolies: Theory and Evidence from Amazon}, with Kyungho Lee}
 
-\textbf{Effects of Recommender Systems with Strategic Sellers}
+\pub{\textbf{Effects of Recommender Systems with Strategic Sellers}}
 
-\vspace{4mm}
+\vspace{2.5mm}
 
 % -------- Teaching Experience --------
 
 \header{Teaching Experience}
 
 \textbf{Yale University} \\
-ECON 159, Game Theory \hfill Fall 2024 \\[0.5mm]
-ECON 5501a, General Economic Theory: Microeconomics (PhD Game Theory) \hfill Spring 2026 \\[4mm]
+ECON 159, Game Theory \hfill Fall 2024 \\
+ECON 5501a, General Economic Theory: Microeconomics (PhD Game Theory) \hfill Spring 2026 \\[3mm]
 
 % -------- Awards --------
 
 \header{Honors \& Awards}
 
-Yale University Dissertation Fellowship \hfill 2026 \\[0.5mm]
-Carl Arvid Anderson Fellowship \hfill 2025 \\[0.5mm]
-Benitez Family Fellowship \hfill 2023 \\[0.5mm]
-Cowles Foundation Fellowship \hfill 2021 \\[0.5mm]
-Phi Beta Kappa \hfill 2021 \\[0.5mm]
+Yale University Dissertation Fellowship \hfill 2026 \\
+Carl Arvid Anderson Fellowship \hfill 2025 \\
+Benitez Family Fellowship \hfill 2023 \\
+Cowles Foundation Fellowship \hfill 2021 \\
+Phi Beta Kappa \hfill 2021 \\
 U.S. Presidential Scholar \hfill 2017
 
-\vspace{4mm}
+\vspace{3mm}
 
 % -------- Invited Presentations --------
 
@@ -116,7 +134,7 @@ U.S. Presidential Scholar \hfill 2017
 	2025-26:		& AI at Yale Symposium, Microsoft Research New England, Stony Brook ICGT
 \end{tabular}
 
-\vspace{4mm}
+\vspace{3mm}
 
 % -------- Professional Service --------
 
