@@ -280,17 +280,11 @@
       margin-top: -5px;
     }
 
-    .paper-meta .tag {
-      display: inline-block;
-      font-size: 10.5px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: #dde3eb;
+    /* Unbolded parenthetical after a title, e.g. "(Job Market Paper)" */
+    .paper-note {
+      font-size: 15px;
+      font-weight: 300;
       color: var(--muted);
-      padding: 2px 7px;
-      border-radius: 2px;
-      margin-right: 6px;
     }
 
     @media (max-width: 640px) {
@@ -303,7 +297,7 @@
     @media (min-width: 900px) {
       body { font-size: 18px; }
       .hero-bio { font-size: 16px; }
-      .paper-title { font-size: 16px; }
+      .paper-title, .paper-note { font-size: 16px; }
       .paper-coauthors { font-size: 14.5px; }
       .paper-meta { font-size: 13px; }
     }
@@ -352,8 +346,7 @@
 
       <div class="paper">
         <div class="paper-left">
-          <div class="paper-title">A Coasian Theory of Coarse Product Lines</div>
-          <div class="paper-meta"><span class="tag">JMP</span>Draft available upon request</div>
+          <a href="https://drive.google.com/file/d/1pn6H2G5-XiLrgG7bh591Xe4xIX8Qre9M/view?usp=sharing" class="paper-title">A Coasian Theory of Coarse Product Lines</a> <span class="paper-note">(Job Market Paper)</span>
         </div>
       </div>
 
