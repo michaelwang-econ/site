@@ -132,6 +132,8 @@
       line-height: 1.8;
     }
 
+    .hero-bio strong { font-weight: 500; }
+
     .hero-links {
       display: flex;
       gap: 24px;
@@ -171,7 +173,8 @@
     .hero-photo {
       width: 260px;
       height: 312px;
-      border-radius: 2px;
+      border-radius: 6px;
+      box-shadow: 0 6px 24px rgba(44, 74, 110, 0.24);
       object-fit: cover;
       object-position: top center;
       display: block;
@@ -190,7 +193,7 @@
     }
 
     .section-label {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -238,7 +241,7 @@
     }
 
     .subsection-label + .paper {
-      padding-top: 19px;
+      padding-top: 12px;
     }
 
     .paper-title {
@@ -324,7 +327,7 @@
         <p class="hero-bio">
           I am an applied microeconomic theorist and PhD candidate at Yale University.
           My research focuses on how information and dynamic learning shape the design of products and prices, with a particular interest in digital markets.
-          I am on the job market in 2026-27.
+          <strong>I am on the job market.</strong>
         </p>
         <div class="hero-links">
           <a href="#research" class="btn-primary">Research</a>
@@ -333,7 +336,7 @@
         </div>
       </div>
 
-      <img src="headshot-web.jpg" alt="Michael C. Wang" class="hero-photo" style="border-radius: 12px;" />
+      <img src="headshot-web.jpg" alt="Michael C. Wang" class="hero-photo" />
     </div>
   </section>
 
